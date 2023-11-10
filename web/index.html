@@ -1,0 +1,84 @@
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2022 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+SPDX-License-Identifier: MIT
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Audiocodes Bridge UI</title>
+    <link href="https://unpkg.com/bootstrap-table@1.18.2/dist/bootstrap-table.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.2.0/mdb.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.18.2/dist/bootstrap-table.min.js"></script>
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+    <script src="contact-client.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container mb-3">
+
+        <section class="p-4 text-center mb-4">
+            <section class="text-center">
+                <h1>Riva x AudioCodes ASR Demo</h1>
+                <h4>AudioCodes API support for RIVA ASR integration</h4>
+            </section>
+
+        </section>
+
+        <div class="row">
+            <div id="transcription_col" class="col">
+                <div class="card border h-100">
+                    <div class="card-header">
+                        <!-- TODO: make this header stay the same height as the concept card header -->
+                        <div class="row">
+                            <div class="align-self-end col mb-0">
+                                <label class="mb-0" for="riva-btn">RIVA ASR transcription</label>
+                            </div>
+                            <div class="d-flex flex-row-reverse col-sm-2 mb-0">
+                                <button id="riva-btn" type="submit" class="btn btn-primary btn-sm w-100" disabled>Start</button>
+                            </div>
+                            <div class="d-flex flex-row-reverse col-sm-2 mb-0">
+                                <button id="riva-btn-stop" type="submit" class="btn btn-primary btn-sm w-100" disabled>Stop</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row mb-3 mx-1">
+                            <div id="transcription_card" class="card card-body scrollable">
+                                <div id="transcription_area">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AREA FOR SHOWING INPUT FIELD -->
+                        <div class="row mx-1">
+                            <div class="col-sm-12 px-0">
+                                    <div class="row">
+                                        <div class="col">
+                                            <input type="text" class="form-control form-control-sm" id="input_field">
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <button id="mute-btn" type="submit" class="btn btn-primary btn-xs w-100" data-mdb-toggle="tooltip" data-mdb-placement="top" title="Mute">
+                                                <i class="icon-mute"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

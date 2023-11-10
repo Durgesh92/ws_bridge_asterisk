@@ -1,0 +1,37 @@
+{
+  "name": "riva-websocket-bridge",
+  "version": "1.0.0",
+  "description": "Bridge service for mapping from Websockets ASR requests to Riva gRPC",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest --config ./jest.config.ts",
+    "test:watch": "npm run test -- --watch",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nvidia-riva/websockets-bridge"
+  },
+  "author": "NVIDIA",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.6.8",
+    "@grpc/proto-loader": "^0.6.13",
+    "bluebird": "^3.7.2",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "google-protobuf": "^3.20.1",
+    "grpc": "^1.24.11",
+    "regenerator-runtime": "^0.13.9",
+    "wavefile": "^11.0.0",
+    "ws": "^8.8.1",
+    "wscat": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.18.9",
+    "babel-jest": "^28.1.1",
+    "jest": "^28.1.3",
+    "jest-websocket-mock": "^2.3.0",
+    "ts-node": "^10.9.1"
+  }
+}
